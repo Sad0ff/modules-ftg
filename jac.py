@@ -20,11 +20,7 @@ class JacquesMod(loader.Module):
 		self.name = self.strings['name']
 		self._me = None
 		self._ratelimit = []
-	async def client_ready(self, client, db):
-		self._db = db
-		self._client = client
-		self.me = await client.get_me()
-		
+	
 	async def jcmd(self, message):
 		""".j <реплай на сообщение/свой текст>\n@offsd подпишись-пожалеешь"""
 		
